@@ -2,7 +2,8 @@
 
 namespace Training1
 {
-    public class Class1
+    public struct Person
     {
+
     }
 }
