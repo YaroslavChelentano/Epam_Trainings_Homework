@@ -6,7 +6,7 @@ namespace Training1.Rectangle
 {
     interface ICoordinates
     {
-        double X { get; set; }
-        double Y { get; set; }
+        double X { get; }
+        double Y { get; }
     }
 }
