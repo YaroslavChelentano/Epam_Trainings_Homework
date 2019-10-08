@@ -3,6 +3,7 @@ using Training1;
 using Training1.Rectangle;
 using Training1.Month;
 using Training1.Color;
+using Training1.Long;
 
 namespace Epam_Trainings_Homework
 {
@@ -36,6 +37,11 @@ namespace Epam_Trainings_Homework
             }
             // Task 4
             Extensions.GetRandomValues();
+            // Task 5
+            long maxValueOfLong = (long)LongRange.Max;
+            long minValueOfLong = (long)LongRange.Min;
+            Console.WriteLine($"Max = {maxValueOfLong}");
+            Console.WriteLine($"Min = {minValueOfLong}");
         }
     }
 }
