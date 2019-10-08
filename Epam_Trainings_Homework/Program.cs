@@ -1,6 +1,8 @@
 ﻿using System;
 using Training1;
 using Training1.Rectangle;
+using Training1.Month;
+using Training1.Color;
 
 namespace Epam_Trainings_Homework
 {
@@ -23,9 +25,17 @@ namespace Epam_Trainings_Homework
             // Task 3
             Console.WriteLine("Enter number of Month: ");
             int numberOfMonth = int.Parse(Console.ReadLine());
-            string selectedMonth = Enum.GetName(typeof(Month), numberOfMonth - 1);
-            Console.WriteLine($"Selected Month is {selectedMonth} ");
+            if (0 <= numberOfMonth && numberOfMonth <= 12)
+            {
+                string selectedMonth = Enum.GetName(typeof(Month), numberOfMonth - 1);
+                Console.WriteLine($"Selected Month is {selectedMonth} ");
+            }
+            else
+            {
+                Console.WriteLine("Invalid value number of Month");
+            }
             // Task 4
+            Extensions.GetRandomValues();
         }
     }
 }
