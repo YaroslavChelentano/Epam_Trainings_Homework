@@ -6,8 +6,8 @@ namespace Training1.Rectangle
 {
     public interface ISize
     {
-        int Width { get; set; }
-        int Height { get; set; }
-        int Perimeter(int width, int height);
+        double Width { get; set; }
+        double Height { get; set; }
+        double Perimeter(double width, double height);
     }
 }
