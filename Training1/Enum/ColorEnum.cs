@@ -5,6 +5,7 @@ using System.Text;
 
 namespace Training1.Color
 {
+    [Flags]
     public enum Colors
     {
         Green = 1,
@@ -14,12 +15,26 @@ namespace Training1.Color
     }
     public static class Extensions
     {
-        public static IEnumerable<Colors> arrayOfColors = Enum.GetValues(typeof(Colors)).Cast<Colors>().ToArray();
-        public static void GetRandomValues ()
+        static Random randomNumber = new Random();
+        public static IDictionary<Colors, int> AssociatedValue = new Dictionary<Colors, int>
+        { { Colors.Green, randomNumber.Next(0,100)}, {Colors.Red, randomNumber.Next(0,100)},
+            { Colors.Blue, randomNumber.Next(0,100)}, {Colors.White, randomNumber.Next(0,100)}};
+        public static void DisplayEnum()
         {
-            for (int i = 0; i< arrayOfColors.Count(); i++)
+            foreach (string colorName in Enum.GetNames(typeof(Colors)))
             {
-                Console.WriteLine(arrayOfColors.ToList()[i]);
+                Console.WriteLine("{0} = {1:D}", colorName,
+                                             Enum.Parse(typeof(Colors), colorName));
+            }
+        }
+        public static void DisplaySortedDictionary()
+        {
+            var items = from pair in AssociatedValue
+                        orderby pair.Value ascending
+                        select pair;
+            foreach (KeyValuePair<Colors, int> keyValue in items)
+            {
+                Console.WriteLine(keyValue.Key + " - " + keyValue.Value);
             }
         }
     }

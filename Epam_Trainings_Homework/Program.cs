@@ -36,7 +36,8 @@ namespace Epam_Trainings_Homework
                 Console.WriteLine("Invalid value number of Month");
             }
             // Task 4
-            Extensions.GetRandomValues();
+            Extensions.DisplayEnum();
+            Extensions.DisplaySortedDictionary();
             // Task 5
             long maxValueOfLong = (long)LongRange.Max;
             long minValueOfLong = (long)LongRange.Min;
