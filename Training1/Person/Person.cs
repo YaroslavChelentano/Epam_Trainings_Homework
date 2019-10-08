@@ -10,11 +10,11 @@ namespace Training1
 
         public void DisplayAgeOfPersonInOrderToGivenNumber(int n)
         {
-            if (n > 0)
+            if (n > 0) // check if n is valid
             {
                 if (Age > n)
                 {
-                    Console.WriteLine($"{Name} {Surname} older than {n}");
+                    Console.WriteLine($"{Name} {Surname} older than {n}"); 
                 }
                 else
                 {
