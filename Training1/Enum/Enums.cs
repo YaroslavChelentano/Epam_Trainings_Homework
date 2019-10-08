@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Training1.Enum
+namespace Training1
 {
-    enum Month
+    public enum Month
     {
         January,
         February,  
