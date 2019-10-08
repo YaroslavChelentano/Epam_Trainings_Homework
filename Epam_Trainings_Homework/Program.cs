@@ -1,4 +1,5 @@
 ﻿using System;
+using Training1;
 
 namespace Epam_Trainings_Homework
 {
@@ -6,7 +7,11 @@ namespace Epam_Trainings_Homework
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // Task 1
+            var Jerry = new Person() { Name = "Jerry", Surname = "Koval", Age = 17 };
+            Console.WriteLine("Enter Age of Person: ");
+            var n = int.Parse(Console.ReadLine());
+            Jerry.DisplayAgeOfPersonInOrderToGivenNumber(n);
         }
     }
 }

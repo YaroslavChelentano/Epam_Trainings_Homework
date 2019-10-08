@@ -8,7 +8,7 @@ namespace Training1
         public string Surname;
         public int Age;
 
-        public void DisplayAgeOfPerson(int n)
+        public void DisplayAgeOfPersonInOrderToGivenNumber(int n)
         {
             if (n > 0)
             {
