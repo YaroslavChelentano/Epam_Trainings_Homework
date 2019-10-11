@@ -58,33 +58,49 @@ namespace Epam_Trainings_Homework
                     if (choiceTaskTraining2 == 1)
                     {
                         // Task 1
-                        //try
-                        //{
-                        //    Exceptions.RecursivePrint(0);
-                        //}
-                        //catch (StackOverflowException e)
-                        //{
-                        //    Console.WriteLine(e.Message);
-                        //}
                         Exceptions.RecursivePrint(0);
                     }
                     if (choiceTaskTraining2 == 2)
                     {
                         // Task 2
-                        //try
-                        //{
-                        //    Exceptions.DisplayArray();
-                        //}
-                        //catch (IndexOutOfRangeException e)
-                        //{
-                        //    Console.WriteLine(e.Message);
-                        //}
                         Exceptions.DisplayArray();
                     }
                     if (choiceTaskTraining2 == 3)
                     {
                         // Task 3 (to execute event viewer win+r and eventvwr.msc)
-
+                        Console.WriteLine("Task done.Please open Training2Task3.png to see screenshot");
+                    }
+                    if (choiceTaskTraining2 == 4)
+                    {
+                        // Task 4
+                        try
+                        {
+                            Exceptions.RecursivePrint(0);
+                        }
+                        catch (StackOverflowException e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+                        try
+                        {
+                            Exceptions.DisplayArray();
+                        }
+                        catch (IndexOutOfRangeException e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+                    }
+                    if (choiceTaskTraining2 == 5)
+                    {
+                        Exceptions.DoSomeMath(-1, -3);
                     }
                     break;
                 default:

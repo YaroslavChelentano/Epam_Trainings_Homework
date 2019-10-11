@@ -17,5 +17,20 @@ namespace Training2
                 Console.WriteLine(arrayOfNumbers[i]);
             }
         }
+        public static void DoSomeMath(int a, int b)
+        {
+            if (a < 0)
+            {
+                throw new ArgumentException("Parameter should be greater than 0", "a");
+            }
+            if (b > 0)
+            {
+                throw new ArgumentException("Parameter should be less than 0", "b");
+            }
+            else
+            {
+                Console.WriteLine("Values are valid");
+            }
+        }
     }
 }
