@@ -51,12 +51,12 @@ namespace Epam_Trainings_Homework
                     Console.WriteLine($"Min = {minValueOfLong}");
                     break;
                 case 2:
+                    // Training 2 
                     Console.WriteLine("Choose Task that will be executed: \n 1.StackOverflowException " +
                        "\n 2.IndexOurOfRangeException \n 3.Event Viewer \n 4.Try-catch-catch construction \n 5.DoSomeMath ");
                     int choiceTaskTraining2 = int.Parse(Console.ReadLine());
                     if (choiceTaskTraining2 == 1)
                     {
-                        // Training 2 
                         // Task 1
                         try
                         {
@@ -67,7 +67,18 @@ namespace Epam_Trainings_Homework
                             Console.WriteLine(e.Message);
                         }
                     }
-
+                    if (choiceTaskTraining2 == 2)
+                    {
+                        // Task 2
+                        try
+                        {
+                            Exceptions.DisplayArray();
+                        }
+                        catch (IndexOutOfRangeException e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+                    }
                     break;
                 default:
                     Console.WriteLine("Invalid input value");
