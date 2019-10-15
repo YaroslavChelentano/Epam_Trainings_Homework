@@ -105,8 +105,10 @@ namespace Epam_Trainings_Homework
                     }
                     break;
                 case 3:
+                    Console.WriteLine("Enter path to directory: ");
+                    var pathToDirectory = Console.ReadLine();
                     var directory = new DirectoryVisualizer();
-                    directory.ShowDirectoryFiles(@"D:\Навчання\Epam");
+                    directory.ShowDirectoryFiles($@"{pathToDirectory}");
                     break;
                 default:
                     Console.WriteLine("Invalid input value");
