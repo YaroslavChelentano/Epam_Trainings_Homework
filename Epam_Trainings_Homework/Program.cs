@@ -117,8 +117,10 @@ namespace Epam_Trainings_Homework
                         try
                         {
                             directory.ShowDirectoryFiles($@"{pathToDirectory}", cmd);
+                            //to call exception 
+                            //directory.ShowDirectoryFiles($@"{pathToDirectory}", null);
                         }
-                        catch(ArgumentNullException exception)
+                        catch (ArgumentNullException exception)
                         {
                             loggerForExceptions.Log(exception.Message);                     
                         }
