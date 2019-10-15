@@ -141,10 +141,12 @@ namespace Epam_Trainings_Homework
                     if (choiceTaskTraining3 == 2)
                     {
                         var cmd = new ConsolePrinter();
+                        Console.WriteLine("Enter directory to file to find: ");
+                        var pathToDirectoryToGetFiles = Console.ReadLine();
                         Console.WriteLine("Enter name of file to find: ");
                         var fileName = Console.ReadLine();
                         var checkTxtFileInDirectory = new
-                            FilesProvider(@"D:\Навчання\Програмування\git\YaroslavChelentano\Epam_Trainings_Homework\Training3",
+                            FilesProvider($@"{pathToDirectoryToGetFiles}",
                             $"{fileName}");
                         try
                         {
