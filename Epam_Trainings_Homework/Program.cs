@@ -5,6 +5,7 @@ using Training1.Month;
 using Training1.Color;
 using Training1.Long;
 using Training2;
+using Training3;
 
 namespace Epam_Trainings_Homework
 {
@@ -12,7 +13,7 @@ namespace Epam_Trainings_Homework
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Choose training: \n 1.Struct \n 2.Exceptions");
+            Console.WriteLine("Choose training: \n 1.Struct \n 2.Exceptions \n 3.I/O Streams");
             int choiceTraining = int.Parse(Console.ReadLine());
             switch (choiceTraining)
             {
@@ -101,6 +102,66 @@ namespace Epam_Trainings_Homework
                     if (choiceTaskTraining2 == 5)
                     {
                         Exceptions.DoSomeMath(-1, -3);
+                    }
+                    break;
+                case 3:
+                    Console.WriteLine("Choose task to check: \n 1.Directories \n 2.GetFile ");
+                    var choiceTaskTraining3 = int.Parse(Console.ReadLine());
+                    FileLogger loggerForExceptions = new FileLogger();
+                    if (choiceTaskTraining3 == 1)
+                    {
+                        var cmd = new ConsolePrinter();
+                        Console.WriteLine("Enter path to directory: ");
+                        var pathToDirectory = Console.ReadLine();
+                        var directory = new DirectoryVisualizer();
+                        try
+                        {
+                            directory.ShowDirectoryFiles($@"{pathToDirectory}", cmd);
+                            //to call exception 
+                            //directory.ShowDirectoryFiles($@"{pathToDirectory}", null);
+                        }
+                        catch (ArgumentNullException exception)
+                        {
+                            loggerForExceptions.Log(exception.Message);                     
+                        }
+                        catch(ArgumentException exception)
+                        {
+                            loggerForExceptions.Log(exception.Message);
+
+                        }
+                        catch(StackOverflowException exception)
+                        {
+                            loggerForExceptions.Log(exception.Message);
+                        }
+                        catch(Exception exception)
+                        {
+                            loggerForExceptions.Log(exception.Message);
+                        }
+                    }
+                    if (choiceTaskTraining3 == 2)
+                    {
+                        var cmd = new ConsolePrinter();
+                        Console.WriteLine("Enter name of file to find: ");
+                        var fileName = Console.ReadLine();
+                        var checkTxtFileInDirectory = new
+                            FilesProvider(@"D:\Навчання\Програмування\git\YaroslavChelentano\Epam_Trainings_Homework\Training3",
+                            $"{fileName}");
+                        try
+                        {
+                            checkTxtFileInDirectory.GetFileAccordingToName(cmd);
+                        }
+                        catch (ArgumentNullException exception)
+                        {
+                            loggerForExceptions.Log(exception.Message);
+                        }
+                        catch(ArgumentException exception)
+                        {
+                            loggerForExceptions.Log(exception.Message);
+                        }
+                        catch(Exception exception)
+                        {
+                            loggerForExceptions.Log(exception.Message);
+                        }
                     }
                     break;
                 default:
