@@ -7,9 +7,17 @@ namespace Training3
 {
     public class FilesProvider : IOperationsWithFiles
     {
-        public void GetFileAccordingToName(string fileName, IPrinter printer)
+        public string PathToDirectoryContainsFile { get; set; }
+        public string FileName { get; set; }
+        public FilesProvider(string pathToDirectoryContainsFile,string fileName)
         {
-            string[] directoryContainingFiles = Directory.GetFiles(@"c:\", $"{fileName}*.txt");
+            PathToDirectoryContainsFile = pathToDirectoryContainsFile;
+            FileName = fileName;
+        }
+        public void GetFileAccordingToName(IPrinter printer)
+        {
+            string[] directoryContainingFiles = Directory.GetFiles($@"{PathToDirectoryContainsFile}", 
+                $"{FileName}*.txt");
             foreach (var nameOfFile in directoryContainingFiles)
                 printer.Print(nameOfFile);
         }

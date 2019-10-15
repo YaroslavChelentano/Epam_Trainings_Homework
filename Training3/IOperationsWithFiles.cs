@@ -6,6 +6,6 @@ namespace Training3
 {
     public interface IOperationsWithFiles
     {
-        void GetFileAccordingToName(string fileName, IPrinter printer);
+        void GetFileAccordingToName(IPrinter printer);
     }
 }

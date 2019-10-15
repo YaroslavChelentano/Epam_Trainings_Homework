@@ -105,11 +105,42 @@ namespace Epam_Trainings_Homework
                     }
                     break;
                 case 3:
-                    ConsolePrinter cmd = new ConsolePrinter();
-                    Console.WriteLine("Enter path to directory: ");
-                    var pathToDirectory = Console.ReadLine();
-                    var directory = new DirectoryVisualizer();
-                    directory.ShowDirectoryFiles($@"{pathToDirectory}",cmd);
+                    Console.WriteLine("Choose task to check: \n 1.Directories \n 2.GetFile ");
+                    var choiceTaskTraining3 = int.Parse(Console.ReadLine());
+                    if (choiceTaskTraining3 == 1)
+                    {
+                        var cmd = new ConsolePrinter();
+                        Console.WriteLine("Enter path to directory: ");
+                        var pathToDirectory = Console.ReadLine();
+                        var directory = new DirectoryVisualizer();
+                        try
+                        {
+                            directory.ShowDirectoryFiles($@"{pathToDirectory}", cmd);
+                        }
+                        catch(ArgumentNullException exception)
+                        {
+                            
+                        }
+                        catch(ArgumentException exception)
+                        {
+
+                        }
+                        catch(StackOverflowException exception)
+                        {
+
+                        }
+                        catch(Exception exception)
+                        {
+
+                        }
+                    }
+                    if (choiceTaskTraining3 == 2)
+                    {
+                        var cmd = new ConsolePrinter();
+                        var checkTxtFileInDirectory = new
+                            FilesProvider(@"D:\Навчання\Програмування\git\YaroslavChelentano\Epam_Trainings_Homework\Training3", "test");
+                        checkTxtFileInDirectory.GetFileAccordingToName(cmd);
+                    }
                     break;
                 default:
                     Console.WriteLine("Invalid input value");
