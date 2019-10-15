@@ -17,7 +17,7 @@ namespace Training3
         public void GetFileAccordingToName(IPrinter printer)
         {
             string[] directoryContainingFiles = Directory.GetFiles($@"{PathToDirectoryContainsFile}", 
-                $"{FileName}*.txt");
+                $"*{FileName}*.txt");
             foreach (var nameOfFile in directoryContainingFiles)
                 printer.Print(nameOfFile);
         }

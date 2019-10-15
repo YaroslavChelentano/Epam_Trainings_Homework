@@ -120,11 +120,12 @@ namespace Epam_Trainings_Homework
                         }
                         catch(ArgumentNullException exception)
                         {
-                            loggerForExceptions.Log(exception.Message);
+                            loggerForExceptions.Log(exception.Message);                     
                         }
                         catch(ArgumentException exception)
                         {
                             loggerForExceptions.Log(exception.Message);
+
                         }
                         catch(StackOverflowException exception)
                         {
@@ -138,8 +139,11 @@ namespace Epam_Trainings_Homework
                     if (choiceTaskTraining3 == 2)
                     {
                         var cmd = new ConsolePrinter();
+                        Console.WriteLine("Enter name of file to find: ");
+                        var fileName = Console.ReadLine();
                         var checkTxtFileInDirectory = new
-                            FilesProvider(@"D:\Навчання\Програмування\git\YaroslavChelentano\Epam_Trainings_Homework\Training3", "test");
+                            FilesProvider(@"D:\Навчання\Програмування\git\YaroslavChelentano\Epam_Trainings_Homework\Training3",
+                            $"{fileName}");
                         try
                         {
                             checkTxtFileInDirectory.GetFileAccordingToName(cmd);
