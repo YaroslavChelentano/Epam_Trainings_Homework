@@ -5,6 +5,7 @@ using Training1.Month;
 using Training1.Color;
 using Training1.Long;
 using Training2;
+using Training3;
 
 namespace Epam_Trainings_Homework
 {
@@ -12,7 +13,7 @@ namespace Epam_Trainings_Homework
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Choose training: \n 1.Struct \n 2.Exceptions");
+            Console.WriteLine("Choose training: \n 1.Struct \n 2.Exceptions \n 3.I/O Streams");
             int choiceTraining = int.Parse(Console.ReadLine());
             switch (choiceTraining)
             {
@@ -102,6 +103,10 @@ namespace Epam_Trainings_Homework
                     {
                         Exceptions.DoSomeMath(-1, -3);
                     }
+                    break;
+                case 3:
+                    var directory = new DirectoryVisualizer();
+                    directory.ShowDirectoryFiles(@"D:\Навчання\Epam");
                     break;
                 default:
                     Console.WriteLine("Invalid input value");
