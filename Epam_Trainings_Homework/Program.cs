@@ -107,6 +107,7 @@ namespace Epam_Trainings_Homework
                 case 3:
                     Console.WriteLine("Choose task to check: \n 1.Directories \n 2.GetFile ");
                     var choiceTaskTraining3 = int.Parse(Console.ReadLine());
+                    FileLogger loggerForExceptions = new FileLogger();
                     if (choiceTaskTraining3 == 1)
                     {
                         var cmd = new ConsolePrinter();
@@ -119,19 +120,19 @@ namespace Epam_Trainings_Homework
                         }
                         catch(ArgumentNullException exception)
                         {
-                            
+                            loggerForExceptions.Log(exception.Message);
                         }
                         catch(ArgumentException exception)
                         {
-
+                            loggerForExceptions.Log(exception.Message);
                         }
                         catch(StackOverflowException exception)
                         {
-
+                            loggerForExceptions.Log(exception.Message);
                         }
                         catch(Exception exception)
                         {
-
+                            loggerForExceptions.Log(exception.Message);
                         }
                     }
                     if (choiceTaskTraining3 == 2)
@@ -139,7 +140,22 @@ namespace Epam_Trainings_Homework
                         var cmd = new ConsolePrinter();
                         var checkTxtFileInDirectory = new
                             FilesProvider(@"D:\Навчання\Програмування\git\YaroslavChelentano\Epam_Trainings_Homework\Training3", "test");
-                        checkTxtFileInDirectory.GetFileAccordingToName(cmd);
+                        try
+                        {
+                            checkTxtFileInDirectory.GetFileAccordingToName(cmd);
+                        }
+                        catch (ArgumentNullException exception)
+                        {
+                            loggerForExceptions.Log(exception.Message);
+                        }
+                        catch(ArgumentException exception)
+                        {
+                            loggerForExceptions.Log(exception.Message);
+                        }
+                        catch(Exception exception)
+                        {
+                            loggerForExceptions.Log(exception.Message);
+                        }
                     }
                     break;
                 default:
