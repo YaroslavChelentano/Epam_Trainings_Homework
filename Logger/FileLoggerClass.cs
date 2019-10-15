@@ -7,7 +7,7 @@ namespace Logger
 {
     public class FileLoggerClass : ILogger
     {
-        public readonly string filePath = @"D:\Навчання\Програмування\git\YaroslavChelentano\Epam_Trainings_Homework\Training3\logs.txt";
+        public readonly string filePath = @"D:\Навчання\Програмування\git\YaroslavChelentano\Epam_Trainings_Homework\Logger\logArchive.txt";
         public void WriteLog(string message)
         {
             using (StreamWriter streamWriter = new StreamWriter(filePath))

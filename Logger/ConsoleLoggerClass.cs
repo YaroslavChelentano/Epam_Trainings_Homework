@@ -13,7 +13,7 @@ namespace Logger
 
         public void ReadLog(string message)
         {
-
+            throw new NotImplementedException("Not supported method");
         }
     }
 }

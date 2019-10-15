@@ -169,19 +169,33 @@ namespace Epam_Trainings_Homework
                     break;
                 case 4:
                     {
-                        
-                        // Task 4 training 2 test Logger
+                        FileLoggerClass loggerTestforFile = new FileLoggerClass();
+                        ConsoleLoggerClass loggerTestforConsole = new ConsoleLoggerClass();
+                        // Task 1 training 3 test Logger
+                        var cmd = new ConsolePrinter();
+                        Console.WriteLine("Enter path to directory: ");
+                        var pathToDirectory = Console.ReadLine();
+                        var directory = new DirectoryVisualizer();
                         try
                         {
-                            Exceptions.RecursivePrint(0);
+                            directory.ShowDirectoryFiles($@"{pathToDirectory}", null);
                         }
-                        catch (StackOverflowException e)
+                        catch (ArgumentNullException e)
                         {
-                            
+                            // Logger for file
+                            loggerTestforFile.WriteLog(e.Message);
+                            loggerTestforFile.ReadLog(e.Message);
+                            // Logger for Console
+                            //loggerTestforConsole.WriteLog(e.Message);
+                            //loggerTestforConsole.ReadLog(e.Message);
+
                         }
                         catch (Exception e)
                         {
-                            Console.WriteLine(e.Message);
+                            loggerTestforFile.WriteLog(e.Message);
+                            loggerTestforFile.ReadLog(e.Message);
+                            //loggerTestforConsole.WriteLog(e.Message);
+                            //loggerTestforConsole.ReadLog(e.Message);
                         }
                     }
                     break;
