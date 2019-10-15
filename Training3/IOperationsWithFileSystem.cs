@@ -4,9 +4,8 @@ using System.Text;
 
 namespace Training3
 {
-    interface IOperationsWithFileSystem
+    public interface IOperationsWithFileSystem
     {
-        void DisplayFile(string path);
-        void ShowDirectoryFiles(string targetDirectory);
+        void ShowDirectoryFiles(string targetDirectory,IPrinter printer);
     }
 }
