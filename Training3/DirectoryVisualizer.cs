@@ -3,7 +3,7 @@ using System.IO;
 
 namespace Training3
 {
-    public class DirectoryVisualizer : ConsolePrinter, IOperationsWithFileSystem 
+    public class DirectoryVisualizer :  IOperationsWithFileSystem 
     {
         public string PathToDirectory { get; set; }
         public DirectoryVisualizer(string pathToDirectory= @"D:\Навчання\Epam")
@@ -13,12 +13,12 @@ namespace Training3
         public void ShowDirectoryFiles(string targetDirectory, IPrinter printer)
         {
             string[] fileEntries = Directory.GetFiles(targetDirectory); // масив файлів директорії
-            foreach (string fileName in fileEntries)
+            foreach (var fileName in fileEntries)
                 printer.Print(fileName);
 
             // Рекурсивна функція для пошуку піддиректорій
             string[] subdirectoryEntries = Directory.GetDirectories(targetDirectory);
-            foreach (string subdirectory in subdirectoryEntries)
+            foreach (var subdirectory in subdirectoryEntries)
                 ShowDirectoryFiles(subdirectory,printer);
         }
     }
