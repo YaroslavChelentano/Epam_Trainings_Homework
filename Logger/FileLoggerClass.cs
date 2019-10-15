@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Logger
 {
-    class FileLoggerClass : ILogger
+    public class FileLoggerClass : ILogger
     {
         public readonly string filePath = @"D:\Навчання\Програмування\git\YaroslavChelentano\Epam_Trainings_Homework\Training3\logs.txt";
         public void WriteLog(string message)

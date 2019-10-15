@@ -6,6 +6,7 @@ using Training1.Color;
 using Training1.Long;
 using Training2;
 using Training3;
+using Logger;
 
 namespace Epam_Trainings_Homework
 {
@@ -13,7 +14,7 @@ namespace Epam_Trainings_Homework
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Choose training: \n 1.Struct \n 2.Exceptions \n 3.I/O Streams");
+            Console.WriteLine("Choose training: \n 1.Struct \n 2.Exceptions \n 3.I/O Streams \n 4.LoggerTest");
             int choiceTraining = int.Parse(Console.ReadLine());
             switch (choiceTraining)
             {
@@ -163,6 +164,24 @@ namespace Epam_Trainings_Homework
                         catch(Exception exception)
                         {
                             loggerForExceptions.Log(exception.Message);
+                        }
+                    }
+                    break;
+                case 4:
+                    {
+                        
+                        // Task 4 training 2 test Logger
+                        try
+                        {
+                            Exceptions.RecursivePrint(0);
+                        }
+                        catch (StackOverflowException e)
+                        {
+                            
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
                         }
                     }
                     break;
