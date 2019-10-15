@@ -3,7 +3,7 @@ using System.IO;
 
 namespace Training3
 {
-    public class DirectoryVisualizer
+    public class DirectoryVisualizer : IOperationsWithFileSystem
     {
         public string PathToDirectory { get; set; }
         public DirectoryVisualizer(string pathToDirectory= @"D:\Навчання\Epam")
@@ -22,7 +22,7 @@ namespace Training3
                 ShowDirectoryFiles(subdirectory);
         }
 
-        public static void DisplayFile(string path)
+        public void DisplayFile(string path)
         {
             Console.WriteLine("Founded file '{0}'.", path); // допоміжна логіка для пошуку файлу
         }
