@@ -7,11 +7,13 @@ using Training1.Long;
 using Training2;
 using Training3;
 using Logger;
+using NLog;
 
 namespace Epam_Trainings_Homework
 {
     class Program
     {
+        private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
         static void Main(string[] args)
         {
             Console.WriteLine("Choose training: \n 1.Struct \n 2.Exceptions \n 3.I/O Streams \n 4.LoggerTest");
@@ -183,6 +185,7 @@ namespace Epam_Trainings_Homework
                         catch (ArgumentNullException e)
                         {
                             // Logger for file
+                            Logger.Error(e.Message);
                             loggerTestforFile.WriteLog(e.Message);
                             loggerTestforFile.ReadLog(e.Message);
                             // Logger for Console
@@ -192,6 +195,7 @@ namespace Epam_Trainings_Homework
                         }
                         catch (Exception e)
                         {
+                            Logger.Error(e.Message);
                             loggerTestforFile.WriteLog(e.Message);
                             loggerTestforFile.ReadLog(e.Message);
                             //loggerTestforConsole.WriteLog(e.Message);
