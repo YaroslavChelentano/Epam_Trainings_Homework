@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 
 namespace TrainingSerializable
 {
-    class XMLSerializable : ISerializable
+    public class XMLSerializable : ISerializable
     {
         public void Writer()
         {
@@ -20,6 +20,7 @@ namespace TrainingSerializable
             writer.Serialize(file, lamba);
             file.Close();
         }
+
         public string Reader()
         {
             XmlSerializer reader = new XmlSerializer(typeof(Car));
