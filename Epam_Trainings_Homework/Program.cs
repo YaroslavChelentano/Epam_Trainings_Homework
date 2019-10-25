@@ -172,6 +172,7 @@ namespace Epam_Trainings_Homework
                 case 4:
                     {
                         FileLoggerClass loggerTestforFile = new FileLoggerClass();
+                        loggerTestforFile.filePath = loggerTestforFile.GetConfigurationOfJson()["pathToLogFile"];
                         ConsoleLoggerClass loggerTestforConsole = new ConsoleLoggerClass();
                         // Task 1 training 3 test Logger
                         var cmd = new ConsolePrinter();
