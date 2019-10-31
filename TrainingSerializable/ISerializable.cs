@@ -7,6 +7,6 @@ namespace TrainingSerializable
     public interface ISerializable
     {
         void Writer(List <Car> cars);
-        string Reader(List <Car> cars);
+        List<Car> Reader();
     }
 }

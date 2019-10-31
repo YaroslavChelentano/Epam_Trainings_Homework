@@ -14,12 +14,12 @@ namespace TrainingSerializable
             string json = JsonConvert.SerializeObject(lamba);
         }
 
-        public string Reader(List <Car> cars)
+        public List<Car> Reader()
         {
-           
+            var cars = new List<Car>();
             //Car lamba = JsonConvert.DeserializeObject<Car>(json);
             //return lamba.Model;
-            return " ";
+            return cars;
         }
     }
 }
