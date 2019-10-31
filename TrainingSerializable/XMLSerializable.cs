@@ -10,23 +10,22 @@ namespace TrainingSerializable
 {
     public class XMLSerializable : ISerializable
     {
+        private string path = Environment.CurrentDirectory + "//SerializationOverviewXML.xml";
         public void Writer(List <Car> cars)
         {
-            Car lamba = new Car("Lamborgini Gallardo", 2003, 309);
-            XmlSerializer writer = new XmlSerializer(typeof(Car));
-            var path = Environment.CurrentDirectory + "//SerializationOverviewXML.xml";
+            XmlSerializer writer = new XmlSerializer(typeof(List<Car>));
             FileStream file = File.Create(path);
-            writer.Serialize(file, lamba);
+            writer.Serialize(file, cars);
             file.Close();
         }
 
-        public string Reader(List <Car> cars)
+        public List<Car> Reader()
         {
-            XmlSerializer reader = new XmlSerializer(typeof(Car));
-            StreamReader file = new StreamReader(Environment.CurrentDirectory + "//SerializationOverviewXML.xml");
-            Car lamba = (Car)reader.Deserialize(file);
+            XmlSerializer reader = new XmlSerializer(typeof(List<Car>));
+            StreamReader file = new StreamReader(path);
+            List<Car> cars = (List<Car>)reader.Deserialize(file);
             file.Close();
-            return lamba.Model + lamba.Speed.ToString();
+            return cars;
         }
     }
 }

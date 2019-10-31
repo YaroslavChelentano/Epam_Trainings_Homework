@@ -212,13 +212,30 @@ namespace Epam_Trainings_Homework
                     Car lamborginiGallardo = new Car("Lamborgini Gallardo", 2003, 309);
                     Car lamborginiAventador = new Car("Lamborgini Aventador", 2011, 350);
                     List<Car> cars = new List<Car>();
+                    cars.Add(lamborginiGallardo);
                     cars.Add(lamborginiAventador);
                     if (choiceTaskTrainingSerialization==1)
                     {
                         XMLSerializable serializationOfCars = new XMLSerializable();
                         serializationOfCars.Writer(cars);
-                        Console.WriteLine(serializationOfCars.Reader(cars) ); 
+                        foreach (Car car in serializationOfCars.Reader())
+                            Console.WriteLine($"Model: {car.Model} \n Year: {car.YearOfManufacture} \n Speed: {car.Speed}");
                     }
+                    if (choiceTaskTrainingSerialization==2)
+                    {
+                        JSONSerializable serializationOfCars = new JSONSerializable();
+                        serializationOfCars.Writer(cars);
+                        foreach (Car car in serializationOfCars.Reader())
+                            Console.WriteLine($"Model: {car.Model} \n Year: {car.YearOfManufacture} \n Speed: {car.Speed}");
+                    }
+                    if (choiceTaskTrainingSerialization==3)
+                    {
+                        BinarySerializable serializationOfCars = new BinarySerializable();
+                        serializationOfCars.Writer(cars);
+                        foreach (Car car in serializationOfCars.Reader())
+                            Console.WriteLine($"Model: {car.Model} \n Year: {car.YearOfManufacture} \n Speed: {car.Speed}");
+                    }
+
                     break;
                 default:
                     Console.WriteLine("Invalid input value");
