@@ -219,22 +219,23 @@ namespace Epam_Trainings_Homework
                         XMLSerializable serializationOfCars = new XMLSerializable();
                         serializationOfCars.Writer(cars);
                         foreach (Car car in serializationOfCars.Reader())
-                        Console.WriteLine(car.Model);
+                            Console.WriteLine($"Model: {car.Model} \n Year: {car.YearOfManufacture} \n Speed: {car.Speed}");
                     }
                     if (choiceTaskTrainingSerialization==2)
                     {
                         JSONSerializable serializationOfCars = new JSONSerializable();
                         serializationOfCars.Writer(cars);
                         foreach (Car car in serializationOfCars.Reader())
-                            Console.WriteLine(car.Model);
+                            Console.WriteLine($"Model: {car.Model} \n Year: {car.YearOfManufacture} \n Speed: {car.Speed}");
                     }
                     if (choiceTaskTrainingSerialization==3)
                     {
                         BinarySerializable serializationOfCars = new BinarySerializable();
                         serializationOfCars.Writer(cars);
                         foreach (Car car in serializationOfCars.Reader())
-                            Console.WriteLine(car.Model);
+                            Console.WriteLine($"Model: {car.Model} \n Year: {car.YearOfManufacture} \n Speed: {car.Speed}");
                     }
+
                     break;
                 default:
                     Console.WriteLine("Invalid input value");
