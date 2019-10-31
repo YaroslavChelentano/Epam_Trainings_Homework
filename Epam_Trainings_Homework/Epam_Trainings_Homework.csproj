@@ -6,9 +6,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.0.0" />
+    <PackageReference Include="NLog" Version="4.6.7" />
+    <PackageReference Include="NLog.Config" Version="4.6.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Logger\Logger.csproj" />
     <ProjectReference Include="..\Training1\Training1.csproj" />
     <ProjectReference Include="..\Training2\Training2.csproj" />
     <ProjectReference Include="..\Training3\Training3.csproj" />
+    <ProjectReference Include="..\TrainingSerializable\TrainingSerializable.csproj" />
   </ItemGroup>
 
 </Project>

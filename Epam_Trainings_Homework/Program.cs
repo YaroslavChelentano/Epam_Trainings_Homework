@@ -6,14 +6,19 @@ using Training1.Color;
 using Training1.Long;
 using Training2;
 using Training3;
+using Logger;
+using NLog;
+using TrainingSerializable;
+using System.Collections.Generic;
 
 namespace Epam_Trainings_Homework
 {
     class Program
     {
+        private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
         static void Main(string[] args)
         {
-            Console.WriteLine("Choose training: \n 1.Struct \n 2.Exceptions \n 3.I/O Streams");
+            Console.WriteLine("Choose training: \n 1.Struct \n 2.Exceptions \n 3.I/O Streams \n 4.LoggerTest \n 5.Serialization");
             int choiceTraining = int.Parse(Console.ReadLine());
             switch (choiceTraining)
             {
@@ -164,6 +169,55 @@ namespace Epam_Trainings_Homework
                         {
                             loggerForExceptions.Log(exception.Message);
                         }
+                    }
+                    break;
+                case 4:
+                    {
+                        FileLoggerClass loggerTestforFile = new FileLoggerClass();
+                        loggerTestforFile.filePath = loggerTestforFile.GetConfigurationOfJson()["pathToLogFile"];
+                        ConsoleLoggerClass loggerTestforConsole = new ConsoleLoggerClass();
+                        // Task 1 training 3 test Logger
+                        var cmd = new ConsolePrinter();
+                        Console.WriteLine("Enter path to directory: ");
+                        var pathToDirectory = Console.ReadLine();
+                        var directory = new DirectoryVisualizer();
+                        try
+                        {
+                            directory.ShowDirectoryFiles($@"{pathToDirectory}", null);
+                        }
+                        catch (ArgumentNullException e)
+                        {
+                            // Logger for file
+                            Logger.Error(e.Message);
+                            loggerTestforFile.WriteLog(e.Message);
+                            loggerTestforFile.ReadLog(e.Message);
+                            // Logger for Console
+                            //loggerTestforConsole.WriteLog(e.Message);
+                            //loggerTestforConsole.ReadLog(e.Message);
+
+                        }
+                        catch (Exception e)
+                        {
+                            Logger.Error(e.Message);
+                            loggerTestforFile.WriteLog(e.Message);
+                            loggerTestforFile.ReadLog(e.Message);
+                            //loggerTestforConsole.WriteLog(e.Message);
+                            //loggerTestforConsole.ReadLog(e.Message);
+                        }
+                    }
+                    break;
+                case 5:
+                    Console.WriteLine("Choose serialization to check: \n 1.XML \n 2.JSON \n 3.Binary ");
+                    var choiceTaskTrainingSerialization = int.Parse(Console.ReadLine());
+                    Car lamborginiGallardo = new Car("Lamborgini Gallardo", 2003, 309);
+                    Car lamborginiAventador = new Car("Lamborgini Aventador", 2011, 350);
+                    List<Car> cars = new List<Car>();
+                    cars.Add(lamborginiAventador);
+                    if (choiceTaskTrainingSerialization==1)
+                    {
+                        XMLSerializable serializationOfCars = new XMLSerializable();
+                        serializationOfCars.Writer(cars);
+                        Console.WriteLine(serializationOfCars.Reader(cars) ); 
                     }
                     break;
                 default:

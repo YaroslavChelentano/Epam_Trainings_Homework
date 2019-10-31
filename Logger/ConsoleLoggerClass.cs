@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Logger
 {
-    class ConsoleLoggerClass : ILogger
+    public class ConsoleLoggerClass : ILogger
     {
         public void WriteLog(string message)
         {
@@ -13,7 +13,7 @@ namespace Logger
 
         public void ReadLog(string message)
         {
-
+            throw new NotImplementedException("Not supported method");
         }
     }
 }
