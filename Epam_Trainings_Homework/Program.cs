@@ -228,6 +228,13 @@ namespace Epam_Trainings_Homework
                         foreach (Car car in serializationOfCars.Reader())
                             Console.WriteLine(car.Model);
                     }
+                    if (choiceTaskTrainingSerialization==3)
+                    {
+                        BinarySerializable serializationOfCars = new BinarySerializable();
+                        serializationOfCars.Writer(cars);
+                        foreach (Car car in serializationOfCars.Reader())
+                            Console.WriteLine(car.Model);
+                    }
                     break;
                 default:
                     Console.WriteLine("Invalid input value");
