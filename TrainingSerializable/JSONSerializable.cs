@@ -1,24 +1,28 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace TrainingSerializable
 {
     public class JSONSerializable : ISerializable
     {
+        private string path = Environment.CurrentDirectory + "//SerializationOverviewJSON.json";
         public void Writer(List<Car> cars)
         {
-            Car lamba = new Car("Lamborgini Gallardo", 2003, 309);
-            lamba.Model = "Lamborgini Diablo";
-            string json = JsonConvert.SerializeObject(lamba);
+            string json = JsonConvert.SerializeObject(cars);
+            using (StreamWriter streamWriter = new StreamWriter(path))
+            {
+                streamWriter.WriteLine(json);
+                streamWriter.Close();
+            }
         }
 
         public List<Car> Reader()
         {
-            var cars = new List<Car>();
-            //Car lamba = JsonConvert.DeserializeObject<Car>(json);
-            //return lamba.Model;
+            string json = File.ReadAllText(path, Encoding.UTF8);
+            var cars = JsonConvert.DeserializeObject<List<Car>>(json);
             return cars;
         }
     }
