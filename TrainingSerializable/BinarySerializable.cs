@@ -4,9 +4,8 @@ using System.Text;
 
 namespace TrainingSerializable
 {
-    public interface ISerializable
+    public class BinarySerializable 
     {
-        void Writer(List <Car> cars);
-        string Reader(List <Car> cars);
+
     }
 }

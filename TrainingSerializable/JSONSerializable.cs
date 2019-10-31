@@ -5,20 +5,21 @@ using System.Text;
 
 namespace TrainingSerializable
 {
-    public class JSONSerializable 
+    public class JSONSerializable : ISerializable
     {
-        public  string Writer()
+        public void Writer(List<Car> cars)
         {
-            Car lamba = new Car();
-            lamba.model = "Lamborgini Diablo";
+            Car lamba = new Car("Lamborgini Gallardo", 2003, 309);
+            lamba.Model = "Lamborgini Diablo";
             string json = JsonConvert.SerializeObject(lamba);
-            return json;
         }
 
-        public  string Reader(string json)
+        public string Reader(List <Car> cars)
         {
-            Car lamba = JsonConvert.DeserializeObject<Car>(json);
-            return lamba.model;
+           
+            //Car lamba = JsonConvert.DeserializeObject<Car>(json);
+            //return lamba.Model;
+            return " ";
         }
     }
 }
