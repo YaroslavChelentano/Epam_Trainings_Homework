@@ -6,5 +6,6 @@ namespace TrainingReflection
 {
     interface IAssemblyInformation
     {
+        void ShowLibraries();
     }
 }

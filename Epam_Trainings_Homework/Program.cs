@@ -10,6 +10,7 @@ using Logger;
 using NLog;
 using TrainingSerializable;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace Epam_Trainings_Homework
 {
@@ -18,7 +19,7 @@ namespace Epam_Trainings_Homework
         private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
         static void Main(string[] args)
         {
-            Console.WriteLine("Choose training: \n 1.Struct \n 2.Exceptions \n 3.I/O Streams \n 4.LoggerTest \n 5.Serialization");
+            Console.WriteLine("Choose training: \n 1.Struct \n 2.Exceptions \n 3.I/O Streams \n 4.LoggerTest \n 5.Serialization \n 6.Reflection");
             int choiceTraining = int.Parse(Console.ReadLine());
             switch (choiceTraining)
             {
@@ -235,9 +236,13 @@ namespace Epam_Trainings_Homework
                         foreach (Car car in serializationOfCars.Reader())
                             Console.WriteLine($"Model: {car.Model} \n Year: {car.YearOfManufacture} \n Speed: {car.Speed}");
                     }
-
                     break;
-                default:
+                case 6:
+                    {
+                    }
+                        break;
+
+                        default:
                     Console.WriteLine("Invalid input value");
                     break;
             }
