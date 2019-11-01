@@ -11,6 +11,7 @@ using NLog;
 using TrainingSerializable;
 using System.Collections.Generic;
 using System.Reflection;
+using TrainingReflection;
 
 namespace Epam_Trainings_Homework
 {
@@ -239,6 +240,17 @@ namespace Epam_Trainings_Homework
                     break;
                 case 6:
                     {
+                        Console.WriteLine("Choose info you want to show \n1. Libraries 2. Classes and Methods");
+                        int trainingReflectionChoice = int.Parse(Console.ReadLine());
+                        AssemblyInfoConsoleOutput info = new AssemblyInfoConsoleOutput();
+                        if (trainingReflectionChoice == 1)
+                        {
+                            info.ShowLibraries();
+                        }
+                        if (trainingReflectionChoice == 2)
+                        {
+                            info.ShowClassesAndMethods();
+                        }
                     }
                         break;
 
