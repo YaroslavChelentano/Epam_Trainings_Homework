@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Training3", "Training3\Trai
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logger", "Logger\Logger.csproj", "{8740E3E2-BDE8-469C-B64B-E03277A399BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingSerializable", "TrainingSerializable\TrainingSerializable.csproj", "{EDD8A884-740A-40A1-94F7-9544518F5D77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrainingSerializable", "TrainingSerializable\TrainingSerializable.csproj", "{EDD8A884-740A-40A1-94F7-9544518F5D77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingReflection", "TrainingReflection\TrainingReflection.csproj", "{DD2C2C50-EBE6-4AA1-AAF9-889D62CA76F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{EDD8A884-740A-40A1-94F7-9544518F5D77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDD8A884-740A-40A1-94F7-9544518F5D77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDD8A884-740A-40A1-94F7-9544518F5D77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD2C2C50-EBE6-4AA1-AAF9-889D62CA76F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD2C2C50-EBE6-4AA1-AAF9-889D62CA76F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD2C2C50-EBE6-4AA1-AAF9-889D62CA76F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD2C2C50-EBE6-4AA1-AAF9-889D62CA76F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
