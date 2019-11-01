@@ -18,6 +18,7 @@
     <ProjectReference Include="..\Training3\Training3.csproj" />
     <ProjectReference Include="..\TrainingReflection\TrainingReflection.csproj" />
     <ProjectReference Include="..\TrainingSerializable\TrainingSerializable.csproj" />
+    <ProjectReference Include="..\TrainingThreading\TrainingThreading.csproj" />
   </ItemGroup>
 
 </Project>
