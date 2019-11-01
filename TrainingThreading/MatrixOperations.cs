@@ -10,11 +10,11 @@ namespace TrainingThreading
             int sum = 0;
             int rows = matrix.GetUpperBound(0);
             int cols = matrix.GetUpperBound(1);
-            const int THREADS = 4;
-            int countOfActions = rows / THREADS;
-            int[] localSums = new int[THREADS];
-            Thread[] threads = new Thread[THREADS];
-            for (int i = 0; i < THREADS; i++)
+            const int THREADSCOUNT = 4;
+            int countOfActions = rows / THREADSCOUNT;
+            int[] localSums = new int[THREADSCOUNT];
+            Thread[] threads = new Thread[THREADSCOUNT];
+            for (int i = 0; i < THREADSCOUNT; i++)
             {
                 int start = countOfActions * i;
                 int end = countOfActions * (i + 1);
