@@ -5,6 +5,26 @@ namespace TrainingThreading
 {
     public class MatrixOperations
     {
+        public int[,] Matrix { get; set; }
+
+        public MatrixOperations(int[,] matrix)
+        {
+            Matrix = matrix;
+        }
+
+        public int[,] GetRandomMatrix(int rowsSize,int colsSize)
+        {
+            Matrix = new int[rowsSize, colsSize];
+            Random ran = new Random();
+            for (int i = 0; i < rowsSize; i++)
+            {
+                for (int j = 0; j < colsSize; j++)
+                {
+                    Matrix[i, j] = ran.Next(1, 15);                   
+                }
+            }
+            return Matrix;
+        }
         public int MatrixSumParallel(int[,] matrix)
         {
             int sum = 0;
