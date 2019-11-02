@@ -12,6 +12,7 @@ using TrainingSerializable;
 using System.Collections.Generic;
 using System.Reflection;
 using TrainingReflection;
+using TrainingThreading;
 
 namespace Epam_Trainings_Homework
 {
@@ -20,7 +21,7 @@ namespace Epam_Trainings_Homework
         private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
         static void Main(string[] args)
         {
-            Console.WriteLine("Choose training: \n 1.Struct \n 2.Exceptions \n 3.I/O Streams \n 4.LoggerTest \n 5.Serialization \n 6.Reflection");
+            Console.WriteLine("Choose training: \n 1.Struct \n 2.Exceptions \n 3.I/O Streams \n 4.LoggerTest \n 5.Serialization \n 6.Reflection \n 7.Threads");
             int choiceTraining = int.Parse(Console.ReadLine());
             switch (choiceTraining)
             {
@@ -253,7 +254,12 @@ namespace Epam_Trainings_Homework
                         }
                     }
                         break;
-
+                case 7:
+                    {
+                        MatrixOperations sumMatrixElements = new MatrixOperations();                   
+                        Console.WriteLine(MatrixOperations.MatrixSumParallel(sumMatrixElements.GetRandomMatrix(1000,1000)));
+                    }
+                    break;
                         default:
                     Console.WriteLine("Invalid input value");
                     break;
