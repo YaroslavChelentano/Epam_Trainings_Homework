@@ -7,9 +7,8 @@ namespace TrainingThreading
     {
         public int[,] Matrix { get; set; }
 
-        public MatrixOperations(int[,] matrix)
+        public MatrixOperations()
         {
-            Matrix = matrix;
         }
 
         public int[,] GetRandomMatrix(int rowsSize,int colsSize)
@@ -25,7 +24,7 @@ namespace TrainingThreading
             }
             return Matrix;
         }
-        public int MatrixSumParallel(int[,] matrix)
+        public static int MatrixSumParallel(int[,] matrix)
         {
             int sum = 0;
             int rows = matrix.GetUpperBound(0);

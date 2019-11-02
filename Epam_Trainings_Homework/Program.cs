@@ -256,31 +256,8 @@ namespace Epam_Trainings_Homework
                         break;
                 case 7:
                     {
-                        int[,] bigMatrix = new int[1000, 1000];
-                        Random ran = new Random();
-                        for (int i = 0; i < 1000; i++)
-                        {
-                            for (int j = 0; j < 1000; j++)
-                            {
-                                bigMatrix[i, j] = ran.Next(1, 15);
-                               // Console.Write("{0}\t", bigMatrix[i, j]);
-                            }
-                           // Console.WriteLine();
-                        }
-                        //int[,] bigMatrix = new int[8, 8];
-                        //Random ran = new Random();
-                        //for (int i = 0; i < 8; i++)
-                        //{
-                        //    for (int j = 0; j < 8; j++)
-                        //    {
-                        //        bigMatrix[i, j] = ran.Next(1, 15);
-                        //        Console.Write("{0}\t", bigMatrix[i, j]);
-                        //    }
-                        //    Console.WriteLine();
-                        //}
-                        MatrixOperations sumMatrixElements = new MatrixOperations();
-                        
-                        Console.WriteLine(sumMatrixElements.MatrixSumParallel(bigMatrix));
+                        MatrixOperations sumMatrixElements = new MatrixOperations();                   
+                        Console.WriteLine(MatrixOperations.MatrixSumParallel(sumMatrixElements.GetRandomMatrix(1000,1000)));
                     }
                     break;
                         default:
