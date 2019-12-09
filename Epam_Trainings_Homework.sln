@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2019
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Epam_Trainings_Homework", "Epam_Trainings_Homework\Epam_Trainings_Homework.csproj", "{54A258A3-3D90-4425-BED2-A8F719CE9509}"
 EndProject
@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrainingReflection", "Train
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrainingStyleCoding", "TrainingStyleCoding\TrainingStyleCoding.csproj", "{D1A62781-EFFE-4881-B68E-8187FB7BD8DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingThreading", "TrainingThreading\TrainingThreading.csproj", "{303DBDF3-F2F2-4AD2-80D1-8C381B52F3A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrainingThreading", "TrainingThreading\TrainingThreading.csproj", "{303DBDF3-F2F2-4AD2-80D1-8C381B52F3A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingsWithDanielHW", "TrainingsWithDanielHW\TrainingsWithDanielHW.csproj", "{F7445EFF-4019-48AE-9EAF-09A1210B5E08}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{303DBDF3-F2F2-4AD2-80D1-8C381B52F3A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{303DBDF3-F2F2-4AD2-80D1-8C381B52F3A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{303DBDF3-F2F2-4AD2-80D1-8C381B52F3A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7445EFF-4019-48AE-9EAF-09A1210B5E08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7445EFF-4019-48AE-9EAF-09A1210B5E08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7445EFF-4019-48AE-9EAF-09A1210B5E08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7445EFF-4019-48AE-9EAF-09A1210B5E08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
