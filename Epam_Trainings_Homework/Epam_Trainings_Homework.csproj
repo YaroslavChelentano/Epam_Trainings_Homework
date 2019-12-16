@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\IocContainer\IocContainer.csproj" />
     <ProjectReference Include="..\Logger\Logger.csproj" />
     <ProjectReference Include="..\Training1\Training1.csproj" />
     <ProjectReference Include="..\Training2\Training2.csproj" />
@@ -19,6 +20,7 @@
     <ProjectReference Include="..\TrainingReflection\TrainingReflection.csproj" />
     <ProjectReference Include="..\TrainingSerializable\TrainingSerializable.csproj" />
     <ProjectReference Include="..\TrainingStyleCoding\TrainingStyleCoding.csproj" />
+    <ProjectReference Include="..\TrainingsWithDanielHW\TrainingsWithDanielHW.csproj" />
     <ProjectReference Include="..\TrainingThreading\TrainingThreading.csproj" />
   </ItemGroup>
 

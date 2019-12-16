@@ -23,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrainingThreading", "Traini
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrainingsWithDanielHW", "TrainingsWithDanielHW\TrainingsWithDanielHW.csproj", "{F7445EFF-4019-48AE-9EAF-09A1210B5E08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IocContainerHW", "IocContainerHW\IocContainerHW.csproj", "{4C99BAA3-D6DE-4610-A3CD-04D6D7F5E46F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IocContainer", "IocContainer\IocContainer.csproj", "{8712309B-6C28-429C-A53B-9324A95A854B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,10 +71,10 @@ Global
 		{F7445EFF-4019-48AE-9EAF-09A1210B5E08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7445EFF-4019-48AE-9EAF-09A1210B5E08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7445EFF-4019-48AE-9EAF-09A1210B5E08}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4C99BAA3-D6DE-4610-A3CD-04D6D7F5E46F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4C99BAA3-D6DE-4610-A3CD-04D6D7F5E46F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4C99BAA3-D6DE-4610-A3CD-04D6D7F5E46F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4C99BAA3-D6DE-4610-A3CD-04D6D7F5E46F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8712309B-6C28-429C-A53B-9324A95A854B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8712309B-6C28-429C-A53B-9324A95A854B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8712309B-6C28-429C-A53B-9324A95A854B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8712309B-6C28-429C-A53B-9324A95A854B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

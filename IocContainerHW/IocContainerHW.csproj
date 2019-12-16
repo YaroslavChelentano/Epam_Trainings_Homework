@@ -41,6 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DependencyInjection\DiContainer.cs" />
+    <Compile Include="DependencyInjection\DiServiceCollection.cs" />
+    <Compile Include="DependencyInjection\ServiceDescriptor.cs" />
+    <Compile Include="DependencyInjection\ServiceLifetime.cs" />
     <Compile Include="IRandomGuidProvider.cs" />
     <Compile Include="ISomeService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

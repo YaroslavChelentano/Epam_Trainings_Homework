@@ -14,6 +14,8 @@ using System.Reflection;
 using TrainingReflection;
 using TrainingThreading;
 using TrainingStyleCoding;
+using IocContainerHW.DependencyInjection;
+using IocContainerHW;
 
 namespace Epam_Trainings_Homework
 {
@@ -23,7 +25,7 @@ namespace Epam_Trainings_Homework
         static void Main(string[] args)
         {
             Console.WriteLine("Choose training: \n 1.Struct \n 2.Exceptions \n 3.I/O Streams \n 4.LoggerTest " +
-                "\n 5.Serialization \n 6.Reflection \n 7.Threads \n 8.StyleCoding Rectangle and Circle");
+                "\n 5.Serialization \n 6.Reflection \n 7.Threads \n 8.StyleCoding Rectangle and Circle \n 9.IOC container");
             int choiceTraining = int.Parse(Console.ReadLine());
             switch (choiceTraining)
             {
@@ -268,6 +270,23 @@ namespace Epam_Trainings_Homework
                         RectangleStyleCoding rectangleSecond = new RectangleStyleCoding(2, 4, 2, 3);
                         rectangleFirst.UnionOfRectangles(rectangleFirst, rectangleSecond).DisplayRectangle();
                         
+                    }
+                    break;
+                case 9:
+                    {
+                        var services = new DiServiceCollection();
+
+
+                        services.RegisterTransient<ISomeService, SomeServiceOne>();
+                        services.RegisterSingleton<IRandomGuidProvider, RandomGuidProvider>();
+
+                        var container = services.GenerateContainer();
+
+                        var serviceFirst = container.GetService<ISomeService>();
+                        var serviceSecond = container.GetService<ISomeService>();
+
+                        serviceFirst.PrintSomething();
+                        serviceSecond.PrintSomething();
                     }
                     break;
                         default:
