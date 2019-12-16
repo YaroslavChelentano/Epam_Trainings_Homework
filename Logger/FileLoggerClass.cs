@@ -11,7 +11,7 @@ namespace Logger
         public IConfigurationRoot GetConfigurationOfJson()
         {
             var config = new ConfigurationBuilder()
-                .AddJsonFile("config.json")
+                .AddJsonFile($"config.json")
                 .Build();
             return config;
         }
