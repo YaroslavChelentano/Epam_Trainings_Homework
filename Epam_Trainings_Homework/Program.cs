@@ -260,16 +260,17 @@ namespace Epam_Trainings_Homework
                         break;
                 case 7:
                     {
+                        Console.WriteLine("Solve sum matrix 1000x1000");
                         MatrixOperations sumMatrixElements = new MatrixOperations();                   
                         Console.WriteLine(MatrixOperations.MatrixSumParallel(sumMatrixElements.GetRandomMatrix(1000,1000)));
                     }
                     break;
                 case 8:
                     {
+                        Console.WriteLine("Display union of Rectangles");
                         RectangleStyleCoding rectangleFirst = new RectangleStyleCoding(1, 3, 1, 2);
                         RectangleStyleCoding rectangleSecond = new RectangleStyleCoding(2, 4, 2, 3);
-                        rectangleFirst.UnionOfRectangles(rectangleFirst, rectangleSecond).DisplayRectangle();
-                        
+                        rectangleFirst.UnionOfRectangles(rectangleFirst, rectangleSecond).DisplayRectangle();             
                     }
                     break;
                 case 9:
